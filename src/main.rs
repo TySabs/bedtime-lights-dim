@@ -74,7 +74,7 @@ async fn fetch_wiz_lights(client: &Client) -> Result<Vec<WizLight>, Box<dyn std:
         let host_id: String = row.get("host_id");
         let name: String = row.get("name");
         wiz_lights.push(WizLight {
-            host_id: format!("{network_id}.{}:38899", host_id),
+            host_id: format!("{}.{}:38899", network_id, host_id),
             name,
         });
     }
